@@ -1,0 +1,17 @@
+.Enterprise {
+    width: 10vh;
+    height: 10vh;
+
+    margin: 0.6vh;
+
+    border: none;
+    border-radius: 50px;
+
+    cursor: pointer;
+
+
+}
+
+.Enterprise:hover {
+    transform: scale(0.9);
+}
