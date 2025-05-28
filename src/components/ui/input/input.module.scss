@@ -1,4 +1,4 @@
-.Input{
+.Input {
     width: 15vw;
     height: 4vh;
 
@@ -7,5 +7,61 @@
 
     margin: 2vh;
 
-    background-color:rgba(231, 203, 40, 0.616);
+    background-color: rgba(231, 203, 40, 0.616);
+}
+
+label,p {
+    font-size: 2.3vh;
+    font-style: oblique;
+
+    margin: 0.5vh 0;
+
+    border-radius: 7px;
+    border: none;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+         width: 30ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 2px #ff00d4;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #ff00d4, 0 0 20px #ff00d4;
+    }
+
+    100% {
+        text-shadow: 0 0 2px #ff00d4;
+    }
+}
+
+label,p {
+    width: 30ch;
+
+    overflow: hidden;
+    white-space: nowrap;
+    width: fit-content;
+     width: 30ch;
+    font-family: monospace;
+
+   animation: typing 3s steps(20, end) infinite,
+        blink 0.7s step-end infinite,
+        glowPulse 2s infinite ease-in-out;
+
+    color: #c99aff;
 }

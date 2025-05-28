@@ -2,13 +2,19 @@
    width: 12vw;
    height: 7vh;
    
-   margin: 1vh;
+   margin: 6vh;
 
    border-radius: 10px;
    border: none;
 
    cursor: pointer;
+
+   background-color: transparent;   color: rgb(34, 136, 252);
+
+   font-size: 5vh;
 }
 .Enter:hover{
-    transform: scale(1.03);
+    transform: scale(1.1);
 }
+
+

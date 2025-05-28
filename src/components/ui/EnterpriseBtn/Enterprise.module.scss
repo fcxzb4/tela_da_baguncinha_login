@@ -1,17 +1,32 @@
-.Enterprise {
-    width: 10vh;
-    height: 10vh;
+.SocialButtons{
+    display: flex;
+  justify-content: center;
+  gap: 1vw;
+  margin-top: 2vh;
 
-    margin: 0.6vh;
-
-    border: none;
-    border-radius: 50px;
-
-    cursor: pointer;
-
-
+  background-color: transparent;
 }
 
-.Enterprise:hover {
-    transform: scale(0.9);
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.Icons{
+  font-size: 2.5vw;
+
+  margin: 0 1.1vw;
+
+  color: rgb(133, 67, 255);
+
+  transition: transform 0.2s ease, color 0.2s ease;
+
+  cursor: pointer;
+
+  &:hover {
+
+    transform: scale(1.1);
+    color: #e7cb28;
+  }
 }
