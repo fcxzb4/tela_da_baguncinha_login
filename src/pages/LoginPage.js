@@ -8,6 +8,5 @@ function LoginPage() {
         <Enter />
         <Enterprise />
     </>
-
 }
-export default LoginPage
+export default LoginPage;

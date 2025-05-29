@@ -2,8 +2,12 @@ import styles from './Enter.module.scss';
 
 function Enter() {
   return <>
-  <button id="enter"  className={styles.Enter}>ENTER</button> 
+    <button className={styles.cyberButton}>
+      ENTER
+      <span className={styles.glitch}></span>
+      <span className={styles.glow}></span>
+    </button>
+
   </>
 }
 export default Enter
-

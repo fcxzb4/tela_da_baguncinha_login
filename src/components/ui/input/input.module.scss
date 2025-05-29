@@ -56,10 +56,10 @@ label,p {
     overflow: hidden;
     white-space: nowrap;
     width: fit-content;
-     width: 30ch;
+     width: 31ch;
     font-family: monospace;
 
-   animation: typing 3s steps(20, end) infinite,
+   animation: typing 4s steps(20, end) infinite,
         blink 0.7s step-end infinite,
         glowPulse 2s infinite ease-in-out;
 

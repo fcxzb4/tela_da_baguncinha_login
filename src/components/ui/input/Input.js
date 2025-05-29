@@ -4,9 +4,9 @@ function Input() {
    return <>
       <label htmlFor="input">LOGIN</label>
       <p>assine sua alma , com o diabo</p>
-      <input id="input" className={styles.Input}></input>
+      <input id="input" className={styles.Input} />
       <p>PASSWORD</p>
-      <input id="input2" className={styles.Input}></input>
+      <input id="input2" className={styles.Input} />
    </>
 }
 export default Input

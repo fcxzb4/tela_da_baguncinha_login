@@ -1,22 +1,26 @@
 @import url(./index.css);
 
 .App {
-    width: 100vw;
+  width: 100vw;
 
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    background-image: url(./../img/pixel_2dad.gif); 
-    background-repeat: no-repeat;
-    background-size:cover;
+  background-image: url(./../img/pixel_2dad.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App {
   width: 100vw;
   height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   overflow-x: hidden;
-  overflow-y: hidden;
 
 
   margin: 0;
@@ -32,9 +36,9 @@ code {
     monospace;
 }
 
-header{
+header {
   width: 100vw;
-  height: 100vh;
+  height: 17%;
 
   display: flex;
   flex-direction: column;
