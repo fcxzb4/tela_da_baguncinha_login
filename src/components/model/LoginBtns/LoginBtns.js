@@ -6,9 +6,11 @@ import ButtonText from "../../ui/buttons_text/ButtonText";
 function Loginbtns({ tryLogin }) {
     return <>
         <div className={styles.LoginBtns}>
+            <ButtonText onClick={tryLogin}>ENTRAR
                 <span className={styles.glitch}></span>
                 <span className={styles.glow}></span>
-            <ButtonText onClick={tryLogin}>ENTRAR</ButtonText>
+            </ButtonText>
+
             <div className={styles.icon}>
                 <Enterprise icon={faInstagram} />
                 <Enterprise icon={faGoogle} />
