@@ -1,8 +1,63 @@
-.Inputs{
-    display: flex;
+.inputWrapper{
+     display: flex;
     flex-direction: column;
     align-items:center ;
     justify-content:center;
-    
-    background-color: red;
+}
+p{
+    font-size: 2.3vh;
+    font-style: oblique;
+
+    margin: 0.5vh 0;
+
+    border-radius: 7px;
+    border: none;
+
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width:15ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 2px #ff00d4;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #ff00d4, 0 0 20px #ff00d4;
+    }
+
+    100% {
+        text-shadow: 0 0 2px #ff00d4;
+    }
+}
+
+p {
+    position: absolute;
+
+    left: 6.3vw;
+
+    overflow: hidden;
+    white-space: nowrap;
+    width: fit-content;
+    font-family: monospace;
+
+    animation: typing 2000ms steps(20, end) infinite,
+        blink 0.7s step-end infinite,
+        glowPulse 1s infinite ease-in-out;
+
+    color: #c99aff;
 }
