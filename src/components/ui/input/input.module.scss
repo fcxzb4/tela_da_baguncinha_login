@@ -1,16 +1,5 @@
-.Input {
-    width: 15vw;
-    height: 4vh;
 
-    border: none;
-    border-radius: 10px;
-
-    margin: 2vh;
-
-    background-color: rgba(231, 203, 40, 0.616);
-}
-
-label,p {
+p{
     font-size: 2.3vh;
     font-style: oblique;
 
@@ -18,6 +7,7 @@ label,p {
 
     border-radius: 7px;
     border: none;
+
 }
 
 @keyframes typing {
@@ -26,7 +16,7 @@ label,p {
     }
 
     to {
-         width: 30ch;
+        width:15ch;
     }
 }
 
@@ -50,18 +40,19 @@ label,p {
     }
 }
 
-label,p {
-    width: 30ch;
+p {
+    position: absolute;
+
+    left: 6.3vw;
 
     overflow: hidden;
     white-space: nowrap;
     width: fit-content;
-     width: 31ch;
     font-family: monospace;
 
-   animation: typing 4s steps(20, end) infinite,
+    animation: typing 2000ms steps(20, end) infinite,
         blink 0.7s step-end infinite,
-        glowPulse 2s infinite ease-in-out;
+        glowPulse 1s infinite ease-in-out;
 
     color: #c99aff;
 }

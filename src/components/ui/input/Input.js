@@ -1,12 +1,26 @@
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 import styles from './input.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function Input() {
-   return <>
-      <label htmlFor="input">LOGIN</label>
-      <p>assine sua alma , com o diabo</p>
-      <input id="input" className={styles.Input} />
-      <p>PASSWORD</p>
-      <input id="input2" className={styles.Input} />
-   </>
+function Input({ name, type = "text", icon, onChange}) {
+  return (
+    <div className={styles.inputWrapper}>
+      <FontAwesomeIcon icon={icon} className={styles.iconLeft} />
+      <input
+        type={type}
+        name={name}
+        className={styles.input}
+        autoComplete="off"
+        onChange={onChange}
+      />
+      {type === 'password' ?
+        <FontAwesomeIcon icon={faEye} className={styles.iconRight} /> 
+        : 
+        <></>
+
+      }
+    </div>
+  );
 }
-export default Input
+
+export default Input;
