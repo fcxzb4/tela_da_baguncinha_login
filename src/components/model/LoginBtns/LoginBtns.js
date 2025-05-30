@@ -10,7 +10,6 @@ function Loginbtns({ tryLogin }) {
                 <span className={styles.glitch}></span>
                 <span className={styles.glow}></span>
             </ButtonText>
-
             <div className={styles.icon}>
                 <Enterprise icon={faInstagram} />
                 <Enterprise icon={faGoogle} />
