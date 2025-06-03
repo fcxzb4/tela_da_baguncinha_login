@@ -1,20 +1,22 @@
-import { FixedSizeList } from "react-window";
+import { FixedSizeGrid } from "react-window";
 import styles from './home.module.scss';
 
-function HomePage({ cardheight = 250 }) {
-  const Cards = Array.from({ length: 200}, (_, i) => ({
+function HomePage() {
+  const Cards = Array.from({ length: 200 }, (_, i) => ({
     id: i + 1,
-    nome:`Cards ${i + 1}`,
+    nome: `Cards ${i + 1}`,
   }));
 
-  const Row = ({ index, style }) => {
+  const Ceil = ({ index, style }) => {
     const Card = Cards[index];
     return (
-      <div style={{ ...style, paddig: "20px",margin:"0 17vw"  , boxsizing: "border-box" }}>
+      <div style={{ ...style, paddig: "20px", margin: "0 17vw", boxsizing: "border-box" }}>
         <div
           className={styles.card}
-          >
-        
+        >
+
+
+
           <h4>{Card.nome}</h4>
           <p>ID:{Card.id}</p>
         </div>
@@ -23,14 +25,16 @@ function HomePage({ cardheight = 250 }) {
   };
 
   return <>
-    <FixedSizeList
-      height={450}
-      itemCount={Cards.length}
-      itemSize={cardheight}
-      width="70vw"
+    <FixedSizeGrid
+      columnWidth={200}
+      rowHeight={250}
+      columnCount={3}
+      rowCount={Math.ceil(Cards.length / 3)}
+      width={700}
+      height={1000}
     >
-      {Row}
-    </FixedSizeList>
+      {Ceil}
+    </FixedSizeGrid>
   </>
 }
 
