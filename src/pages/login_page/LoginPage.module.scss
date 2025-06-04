@@ -25,22 +25,99 @@
         z-index: -1;
     }
 
-    .Title {
-        width: 80%;
-        text-align: start;
-
-        h1 {
-            font-size: 2.5vw;
-        }
-
-        p {
-            font-size: 0.8vw;
-        }
-
-    }
-
     .NavigationCreateAcount {
         display: flex;
         font-size: 1.2vw;
+    }
+}
+
+.title {
+    color: rgb(0, 162, 255);
+
+    overflow: hidden;
+    white-space: nowrap;
+    width: fit-content;
+    font-family: monospace;
+
+    animation: steps(20, end) infinite,
+        blink 0.1s step-end infinite,
+        glowPulse1 2s infinite ease-in-out,
+        colorchange 4000ms infinite ease-in-out;
+
+}
+
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes glowPulse1 {
+    0% {
+        text-shadow: 0 0 10px #3700ff;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ffe600;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #ff00d4;
+    }
+}
+
+@keyframes colorchange {
+    0% {
+        color: #ff8a8a8e;
+    }
+
+    50% {
+        color: #9bffe681;
+    }
+
+    80% {
+        color: #7bffa78c;
+    }
+
+    100% {
+        color: #33ff0081;
+    }
+
+}
+
+.NavigationCreateAcount {
+
+    overflow: hidden;
+    white-space: nowrap;
+    width: fit-content;
+    font-family: monospace;
+
+    animation: typing 2000ms steps(20, end) infinite,
+        blink 0.1s step-end infinite,
+        glowPulse2 4500ms infinite ease-in-out;
+}
+
+@keyframes glowPulse2 {
+    0% {
+        color: #00ff22;
+    }
+
+
+    35% {
+        color: crimson;
+    }
+
+    50% {
+        color: #ffe600;
+    }
+
+    65% {
+        color: rgb(255, 0, 0);
+    }
+
+
+    100% {
+        color: #ff00d4;
     }
 }

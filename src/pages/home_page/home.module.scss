@@ -1,0 +1,31 @@
+.allcards{
+    width: 14vw;
+    height: 15vh;
+
+
+    margin: 10vh ;   
+
+    position:static;
+
+    background-color: transparent;
+}
+
+.Card{
+    background-color: red;
+    
+    padding: 0 2.5vw;
+
+   cursor: pointer;
+   
+
+    &:hover{
+        transform: scale(1.2);  
+    }
+    
+}
+
+.Fckscroll{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: scroll;
+}

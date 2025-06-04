@@ -24,7 +24,7 @@ function LoginPage() {
     const tryLogin = () => {
         const { email, password } = LoginForm;
 
-        if (email === 'teste@email.com' && password === '12345678') {
+        if (email === 'teste@gmail.com' && password === '12345678') {
             alert("Login realizado com sucesso!");
             navigate('/home');
         } else {

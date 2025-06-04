@@ -4,7 +4,7 @@ import styles from './Enterprise.module.scss';
 function Enterprise({icon}) {
   return <>
     <div className={styles.SocialButtons}>
-      <button><FontAwesomeIcon icon={icon} className={styles.Icons} size='4x' /> </button>
+      <button><FontAwesomeIcon icon={icon} className={styles.Icons} size='3x' /> </button>
     </div>
   </>
 
