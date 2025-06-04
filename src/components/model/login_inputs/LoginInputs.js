@@ -6,13 +6,13 @@ import TextNavegate from "../../ui/text_navigate/TextNavegate"
 function LoginInputs({ onChange }) {
     return <>
         <div className={styles.Inputs}>
-            <Input
+            <Input 
                 name="email"
                 type='email'
                 icon={faEnvelope}
                 onChange={onChange}
             />
-            <Input
+            <Input 
                 name='password'
                 type='password'
                 icon={faKey}

@@ -1,4 +1,3 @@
-import { faEye } from '@fortawesome/free-solid-svg-icons';
 import styles from './input.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -14,7 +13,7 @@ function Input({ name, type = "text", icon, onChange}) {
         onChange={onChange}
       />
       {type === 'password' ?
-        <FontAwesomeIcon icon={faEye} className={styles.iconRight} /> 
+        <FontAwesomeIcon  className={styles.iconRight} /> 
         : 
         <></>
 

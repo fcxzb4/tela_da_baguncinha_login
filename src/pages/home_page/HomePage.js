@@ -1,41 +1,47 @@
 import { FixedSizeGrid } from "react-window";
-import styles from './home.module.scss';
+import styles from './Home.module.scss';
 
 function HomePage() {
-  const Cards = Array.from({ length: 200 }, (_, i) => ({
+  const cards = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     nome: `Cards ${i + 1}`,
   }));
 
-  const Ceil = ({ index, style }) => {
-    const Card = Cards[index];
+  const columnCount = 3;
+  const rowCount = 3;
+  const columnWidth = 200;
+  const rowHeight = 250;
+
+  const Cell = ({ columnIndex, rowIndex, style }) => {
+    const index = rowIndex * columnCount + columnIndex;
+
+    if (index >= cards.length) return null;
+
+    const card = cards[index];
+
     return (
-      <div style={{ ...style, paddig: "20px", margin: "0 17vw", boxsizing: "border-box" }}>
-        <div
-          className={styles.card}
-        >
-
-
-
-          <h4>{Card.nome}</h4>
-          <p>ID:{Card.id}</p>
+      <div style={{ ...style, padding: "20px", margin: "0", boxSizing: "border-box" }}>
+        <div className={styles.card}>
+          <h4>{card.nome}</h4>
+          <p>ID: {card.id}</p>
         </div>
       </div>
     );
   };
 
-  return <>
+  return (
     <FixedSizeGrid
-      columnWidth={200}
-      rowHeight={250}
-      columnCount={3}
-      rowCount={Math.ceil(Cards.length / 3)}
-      width={700}
-      height={1000}
+      columnCount={columnCount}
+      rowCount={rowCount}
+      columnWidth={columnWidth}
+      rowHeight={rowHeight}
+      width={columnCount * columnWidth}
+      height={rowCount * rowHeight}
     >
-      {Ceil}
+      {Cell}
     </FixedSizeGrid>
-  </>
+  );
 }
+
 
 export default HomePage

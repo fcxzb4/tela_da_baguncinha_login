@@ -7,5 +7,6 @@ function Enterprise({icon}) {
       <button><FontAwesomeIcon icon={icon} className={styles.Icons} size='4x' /> </button>
     </div>
   </>
+
 }
- export default Enterprise
+export default Enterprise
