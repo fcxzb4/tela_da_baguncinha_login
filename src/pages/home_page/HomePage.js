@@ -9,8 +9,8 @@ function HomePage() {
 
   const columnCount = 3;
   const rowCount = 3;
-  const columnWidth = 200;
-  const rowHeight = 200;
+  const columnWidth = 250;
+  const rowHeight = 250;
 
   const Cell = ({ columnIndex, rowIndex, style }) => {
     const index = rowIndex * columnCount + columnIndex;
@@ -20,10 +20,12 @@ function HomePage() {
     const card = cards[index];
 
     return (
-      <div style={{ ...style, padding: "50px", margin: "0", boxSizing: "border-box", borderRadius:"20px", border:"solid" }}>
+      <div style={{ ...style, padding: "0", margin: "0", boxSizing: "border-box", borderRadius: "20px" }}>
         <div className={styles.Card}>
-          <h4>{card.Nome}</h4>
-          <p>ID: {card.Id}</p>
+          <div className={styles.cardp}>
+            <h4>{card.Nome}</h4>
+            <p className={styles.typing}> ID: {card.Id}</p>
+          </div>
         </div>
       </div>
     );
@@ -31,6 +33,7 @@ function HomePage() {
 
   return (
     <FixedSizeGrid
+      style={{ overflow: 'visible' }}
       columnCount={columnCount}
       rowCount={rowCount}
       columnWidth={columnWidth}
@@ -38,6 +41,7 @@ function HomePage() {
       width={columnCount * columnWidth}
       height={rowCount * rowHeight}
       className={styles.Fckscroll}
+      overflow='scroll'
     >
       {Cell}
     </FixedSizeGrid>

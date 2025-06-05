@@ -1,31 +1,117 @@
-.allcards{
-    width: 14vw;
-    height: 15vh;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap'); // Fonte futurista
 
+.Card {
+    width: 8vw;
+    height: 18vh;
 
-    margin: 10vh ;   
+    display: flex;
+    align-items: start;
+    justify-content: center;
 
-    position:static;
+    cursor: pointer;
 
-    background-color: transparent;
-}
+    background-image: url(./../../../img/card_pixel.gif);
+    background-position: center ;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    box-shadow:
+        0 0 10px #ff00cc,
+        0 0 20px #00ffe0,
+        0 0 30px #ff00cc;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    animation: fadeInCard 0.8s ease forwards,
+        borderGlow 3000ms infinite;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-.Card{
-    background-color: red;
-    
-    padding: 0 2.5vw;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow:
+            50px 20px 15px #ff00cc,
+            50px 20px 25px #00ffe0,
+            50px 20px 35px #ff00cc;
+        border-color: #ffffff;
 
-   cursor: pointer;
-   
-
-    &:hover{
-        transform: scale(1.2);  
+        animation-play-state: paused;
     }
-    
+
+
+    h4 {
+        font-size: 1.4rem;
+        color: #ff00cc;
+    }
+
+    p {
+        font-size: 3vh;
+        color: #ff0000;
+    }
 }
 
-.Fckscroll{
+@keyframes borderGlow {
+    0% {
+        box-shadow:
+            0 0 10px #ff00cc,
+            0 0 20px #00ffe0,
+            0 0 30px #ff00cc;
+    }
+
+    25% {
+        box-shadow:
+            0 0 10px #00ffe0,
+            0 0 20px #ff00cc,
+            0 0 30px #00ffe0;
+    }
+
+    50% {
+        box-shadow:
+            0 0 10px #00ff6a,
+            0 0 20px #ff00cc,
+            0 0 30px #00ff6a;
+    }
+
+    75% {
+        box-shadow:
+            0 0 10px #ff0000,
+            0 0 20px #00ffe0,
+            0 0 30px #ff0000;
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px #ff00cc,
+            0 0 20px #00ffe0,
+            0 0 30px #ff00cc;
+    }
+}
+
+@keyframes fadeInCard {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeInCard {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.typing {
+    top: 15vh;
+    left: 2.4vw;
+}
+
+
+.Fckscroll {
     scrollbar-width: none;
-    -ms-overflow-style: none;
-    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
