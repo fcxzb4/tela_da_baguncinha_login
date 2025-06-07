@@ -2,7 +2,7 @@
 
 .Card {
     width: 8vw;
-    height: 18vh;
+    height: 20vh;
 
     display: flex;
     align-items: start;
@@ -114,4 +114,17 @@
     &::-webkit-scrollbar {
         display: none;
     }
+}
+.BinButton{
+    position: absolute;
+
+    left: 3vw;
+    bottom: 20vh;
+}
+.PencilButton{
+    position: absolute;
+
+    bottom: 20vh;
+
+    left: 1vw;
 }
