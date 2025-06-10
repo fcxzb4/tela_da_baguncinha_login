@@ -6,7 +6,7 @@ import { faPencil, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 function HomePage() {
   const [cards, setCards] = useState(
-    Array.from({ length: 10 }, (_, i) => ({
+    Array.from({ length: 1 }, (_, i) => ({
       Id: i + 1,
       Nome: `jacú ${i + 1}`,
       gif: './../../img/card_pixel.gif',
@@ -14,11 +14,12 @@ function HomePage() {
   );
 
   const columnCount = 3;
-  const columnWidth = 250;
-  const rowHeight = 300;
+  const columnWidth = 400;
+  const rowHeight = 480
 
   // rowCount dinâmico baseado no número de cards + 1 (botão de adicionar)
-  const rowCount = Math.ceil(cards.length / columnCount);
+ const totalItems = cards.length + 1; // inclui o botão "+"
+ const rowCount = Math.ceil(totalItems / columnCount);
 
   const Cell = ({ columnIndex, rowIndex, style }) => {
     const index = rowIndex * columnCount + columnIndex;
@@ -33,12 +34,14 @@ function HomePage() {
               const newCard = {
                 Id: cards.length + 1,
                 Nome: `jacú ${cards.length + 1}`,
-                gif: './../../img/card_pixel.gif',
+                gif: './../../../img/card_pixel.gif',
               };
               setCards([...cards, newCard]);
             }}
           >
-            <h1 style={{ fontSize: "4vw" }}>+</h1>
+            <div className={styles.create}>
+            <h1 style={{ fontSize: "5vw" }}>+</h1>
+            </div>
           </div>
         </div>
       );
@@ -49,10 +52,10 @@ function HomePage() {
     const card = cards[index];
 
     return (
-      <div style={{ ...style, padding: "0", margin: "0  ", boxSizing: "border-box", borderRadius: "20px" }}>
+      <div style={{ ...style, padding: "0", margin: "0", boxSizing: "border-box", borderRadius: "20px" }}>
         <div className={styles.Card}>
           <div className={styles.cardp}>
-            <h4>{card.Nome}</h4>
+            <h4 className={styles.name}>{card.Nome}</h4>
             <p className={styles.typing}>ID: {card.Id}</p>
             <div>
               <button
@@ -75,21 +78,19 @@ function HomePage() {
   };
 
   return (
-     <div style={{ paddingTop: "57vh" }}>
-    <FixedSizeGrid
-      style={{ overflow: 'visible' }}
-      columnCount={columnCount}
-      rowCount={rowCount}
-      columnWidth={columnWidth}
-      rowHeight={rowHeight}
-      width={columnCount * columnWidth}
-      height={rowCount * rowHeight}
-      className={styles.Fckscroll}
-    >
-      {Cell}
-    </FixedSizeGrid>
-    </div>
-  );
+  <FixedSizeGrid
+  style={{ overflow: '' }} // scroll apenas se necessário
+  columnCount={columnCount}
+  rowCount={rowCount}
+  columnWidth={columnWidth}
+  rowHeight={rowHeight}
+  width={columnCount * columnWidth}
+  height={Math.min(rowCount * rowHeight, 800)} // 800px ou menos
+  className={styles.Fckscroll}
+>
+  {Cell}
+</FixedSizeGrid>
+  )
 }
 
 export default HomePage;

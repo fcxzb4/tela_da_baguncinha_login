@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap'); // Fonte futurista
 
 .Card {
-    width: 8vw;
-    height: 20vh;
+    width: 15vw;
+    height: 39vh;
 
-    display: flex;
-    align-items: start;
-    justify-content: center;
 
     cursor: pointer;
 
@@ -88,28 +85,31 @@
 }
 
 @keyframes fadeInCard {
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+.name{
+    color: rgb(0, 0, 0);
 
-
-@keyframes fadeInCard {
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    position: absolute;
+    top:30vh;
+    left:6.5vw ;
 }
-
 .typing {
-    top: 15vh;
-    left: 2.4vw;
+    top: 38vh;
+    left: 6vw;
 }
 
 
 .Fckscroll {
     scrollbar-width: none;
+     margin-top: 20vh;
 
     &::-webkit-scrollbar {
         display: none;
@@ -117,14 +117,50 @@
 }
 .BinButton{
     position: absolute;
+    
+    color: rgb(255, 76, 76);
 
-    left: 3vw;
-    bottom: 20vh;
+    left: 14vw;
+    bottom: 38vh;
 }
 .PencilButton{
     position: absolute;
 
-    bottom: 20vh;
+    color: blue;
 
-    left: 1vw;
+    bottom: 38vh;
+    left: 11vw;
+}
+.create{
+    position: fixed;
+    top: 7.5vh;
+    left: 7.3vw;
+    animation: fadeInCard 1000ms infinite ,ease-in-out
+    glowPulse3 3000ms infinite,ease-in-out;
+
+    &:hover{
+     transform: scale(1.2);
+    }
+}
+@keyframes glowPulse3 {
+    0% {
+        color: #ff00d4d0;
+    }
+    
+    35% {
+        color: #00ccffd0;
+    }
+
+    50% {
+        color: #ffe600d8;
+    }
+
+    65% {
+        color: #ff0000d0;
+    }
+    
+
+    100% {
+        color: #ff00d4d0;
+    }
 }
