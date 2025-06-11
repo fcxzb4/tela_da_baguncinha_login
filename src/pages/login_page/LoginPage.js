@@ -1,6 +1,6 @@
-import LoginInputs from '../../components/model/login_inputs/LoginInputs';
+import LoginInputs from '../../components/container/login_inputs/LoginInputs';
 import { useState } from 'react';
-import Loginbtns from '../../components/model/LoginBtns/LoginBtns';
+import Loginbtns from '../../components/container/LoginBtns/LoginBtns';
 
 import styles from "./LoginPage.module.scss";
 import { useNavigate } from 'react-router-dom';

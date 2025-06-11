@@ -33,8 +33,7 @@ function HomePage() {
             onClick={() => {
               const newCard = {
                 Id: cards.length + 1,
-                Nome: `jacú ${cards.length + 1}`,
-                gif: './../../../img/card_pixel.gif',
+                Nome: `jacú ${cards.length + 1}`
               };
               setCards([...cards, newCard]);
             }}

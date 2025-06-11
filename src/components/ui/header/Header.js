@@ -10,9 +10,6 @@ function Header() {
             <Link to={'/home'}>
                 <button className={styles.btn_header}>Home</button>
             </Link>
-            <Link to={'/form'}>
-                  <button className={styles.btn_header}>Form</button>
-            </Link> 
         </div>
     </>
 }

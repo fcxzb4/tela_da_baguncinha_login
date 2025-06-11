@@ -137,10 +137,6 @@
     left: 7.3vw;
     animation: fadeInCard 1000ms infinite ,ease-in-out
     glowPulse3 3000ms infinite,ease-in-out;
-
-    &:hover{
-     transform: scale(1.2);
-    }
 }
 @keyframes glowPulse3 {
     0% {
