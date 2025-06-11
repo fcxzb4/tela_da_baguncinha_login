@@ -3,6 +3,7 @@ import styles from './home.module.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { faPencil, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const [cards, setCards] = useState(
