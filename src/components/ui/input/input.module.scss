@@ -1,80 +1,27 @@
-.input {
-    height: 2vh;
-
-    border-radius: 3px;
-    border-width: 0.2px;
-
-    margin: 0.3vh;
-
-    background-color: transparent;
-}
-
-
+// src/components/InputField/InputField.module.scss
 .inputWrapper {
+    width: 16vw;
+    height: 2vw;
+    
+    border-bottom: 1px solid white;
     display: flex;
-    flex-direction: column;
-    align-items: start;
+    align-items: center;
 
-    margin: 2vh;
+    margin: 1vw 0 0;
 
-    color: aqua;
-
-}
-
-p {
-    font-size: 2.3vh;
-    font-style: oblique;
-
-    margin: 0.5vh 0;
-
-    border-radius: 7px;
-    border: none;
-
-}
-
-@keyframes typing {
-    from {
-        width: 0;
+    .input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 1rem;
+        padding: 0 1rem;
     }
 
-    to {
-        width: 15ch;
+    .iconLeft, .iconRight {
+        color: white;
+        font-size: 1.25rem;
+        padding-right: 0.5rem;
     }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
-@keyframes glowPulse {
-    0% {
-        text-shadow: 0 0 2px #ff00d4;
-    }
-
-    50% {
-        text-shadow: 0 0 10px #ff00d4, 0 0 20px #ff00d4;
-    }
-
-    100% {
-        text-shadow: 0 0 2px #ff00d4;
-    }
-}
-
-p {
-    position: absolute;
-
-    left: 6.3vw;
-
-    overflow: hidden;
-    white-space: nowrap;
-    width: fit-content;
-    font-family: monospace;
-
-    animation: typing 2000ms steps(20, end) infinite,
-        blink 0.7s step-end infinite,
-        glowPulse 1s infinite ease-in-out;
-
-    color: #c99aff;
 }

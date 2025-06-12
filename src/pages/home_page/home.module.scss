@@ -1,162 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap'); // Fonte futurista
-
-.Card {
-    width: 15vw;
-    height: 39vh;
-
-
-    cursor: pointer;
-
-    background-image: url(./../../../img/card_pixel.gif);
-    background-position: center ;
-    border: 2px solid #ffffff;
-    border-radius: 20px;
-    box-shadow:
-        0 0 10px #ff00cc,
-        0 0 20px #00ffe0,
-        0 0 30px #ff00cc;
-    padding: 20px;
-    color: #fff;
-    font-family: 'Orbitron', sans-serif;
-    animation: fadeInCard 0.8s ease forwards,
-        borderGlow 3000ms infinite;
-    transform: translateY(10px);
-    opacity: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow:
-            50px 20px 15px #ff00cc,
-            50px 20px 25px #00ffe0,
-            50px 20px 35px #ff00cc;
-        border-color: #ffffff;
-
-        animation-play-state: paused;
-    }
-
-
-    h4 {
-        font-size: 1.4rem;
-        color: #ff00cc;
-    }
-
-    p {
-        font-size: 3vh;
-        color: #ff0000;
-    }
-}
-
-@keyframes borderGlow {
-    0% {
-        box-shadow:
-            0 0 10px #ff00cc,
-            0 0 20px #00ffe0,
-            0 0 30px #ff00cc;
-    }
-
-    25% {
-        box-shadow:
-            0 0 10px #00ffe0,
-            0 0 20px #ff00cc,
-            0 0 30px #00ffe0;
-    }
-
-    50% {
-        box-shadow:
-            0 0 10px #00ff6a,
-            0 0 20px #ff00cc,
-            0 0 30px #00ff6a;
-    }
-
-    75% {
-        box-shadow:
-            0 0 10px #ff0000,
-            0 0 20px #00ffe0,
-            0 0 30px #ff0000;
-    }
-
-    100% {
-        box-shadow:
-            0 0 10px #ff00cc,
-            0 0 20px #00ffe0,
-            0 0 30px #ff00cc;
-    }
-}
-
-@keyframes fadeInCard {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.name{
-    color: rgb(0, 0, 0);
-
-    position: absolute;
-    top:30vh;
-    left:6.5vw ;
-}
-.typing {
-    top: 38vh;
-    left: 6vw;
-}
-
-
-.Fckscroll {
+.Grind{
+    margin: 10vh 0 0 0 ;
     scrollbar-width: none;
-     margin-top: 20vh;
+    -ms-overflow-style: none;
+    overflow: scroll;
+}
 
-    &::-webkit-scrollbar {
-        display: none;
+.Card{
+    width:90%;
+    height: 90%;
+    position: relative;
+
+    margin: 1vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: white;
+    border-radius: 0.8vw;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 1);
+
+    margin: 1vw;
+
+    img{
+        height: 60%;
+    }
+
+    h1{
+        width: 100%;
+        padding: 0 0 0 1.5vw;
+        font-size: 1vw;
+    }
+
+    h4{
+        font-size: 1.5vw;
+        width: 100%;
+        padding: 0 0 0 1.5vw;
+    }
+
+    div{
+        button{
+            width: 2vw;
+            height: 2vw;
+            margin: 0.2vw;
+            padding: 0.2vw;
+
+            border-radius: 50%;
+            border: none;
+
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        .BinButton{
+            background-color: rgb(152, 23, 23);
+        }
+        .PencilButton{
+            background-color: rgb(23, 106, 169);
+        
+        }
     }
 }
-.BinButton{
-    position: absolute;
-    
-    color: rgb(255, 76, 76);
 
-    left: 14vw;
-    bottom: 38vh;
-}
-.PencilButton{
-    position: absolute;
-
-    color: blue;
-
-    bottom: 38vh;
-    left: 11vw;
-}
-.create{
-    position: fixed;
-    top: 7.5vh;
-    left: 7.3vw;
-    animation: fadeInCard 1000ms infinite ,ease-in-out
-    glowPulse3 3000ms infinite,ease-in-out;
-}
-@keyframes glowPulse3 {
-    0% {
-        color: #ff00d4d0;
-    }
-    
-    35% {
-        color: #00ccffd0;
+.AddCard{
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    h1{
+        padding: 0;
     }
 
-    50% {
-        color: #ffe600d8;
-    }
-
-    65% {
-        color: #ff0000d0;
-    }
-    
-
-    100% {
-        color: #ff00d4d0;
+    &:hover{
+        transform: scale(1.05);
     }
 }

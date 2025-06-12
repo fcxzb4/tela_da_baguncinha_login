@@ -1,25 +1,26 @@
-import { faKey , faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import Input from "../../ui/input/Input"
-import styles from "./LoginInputs.model.scss"
-import TextNavegate from "../../ui/text_navigate/TextNavegate"
+import styles from './login_inputs.module.scss'
+import Input from './../../ui/input/Input';
+import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
+import TextNavigation from './../../ui/text_navigation/TextNavigation';
 
-function LoginInputs({ onChange }) {
+function LoginInputs({onChange}) {
     return <>
         <div className={styles.Inputs}>
-            <Input 
+            <Input
                 name="email"
                 type='email'
                 icon={faEnvelope}
                 onChange={onChange}
             />
-            <Input 
-                name='password'
+            <Input
+                name="password"
                 type='password'
                 icon={faKey}
                 onChange={onChange}
             />
-            <TextNavegate text={"Esqueceu sua senha"} />
+            <TextNavigation text={"Esqueceu sua senha?"} />
         </div>
     </>
 }
-export default LoginInputs
+
+export default LoginInputs;

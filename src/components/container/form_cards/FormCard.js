@@ -1,6 +1,6 @@
-import styles from '../../../pages/form_page/form.module.scss';
+import styles from '../../../pages/form_card/form_card_page.module.scss';
 import Input from '../../ui/input/Input';
-import ButtonText from '../../ui/button_text/ButtonText';
+import ButtonText from '../../ui/btn_text/ButtonText';
 import { faIdCard, faImage, faUser } from "@fortawesome/free-solid-svg-icons";
 
 export default function FormCard({ formData, onChange, onSubmit, modoEdicao }) {
@@ -19,7 +19,7 @@ export default function FormCard({ formData, onChange, onSubmit, modoEdicao }) {
           name="nome"
           type="text"
           icon={faUser}
-          value={formData.name}
+          value={formData.nome}
           onChange={onChange}
         />
         <Input

@@ -1,25 +1,25 @@
 import { useState, useEffect } from 'react';
+import { useCartoes } from './useCartoes';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useCardStore } from './useCardStore';
 
 export const useFormCard = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const id = location.state?.id;
 
-  const { cards, addcards, editcards } = useCardStore();
+  const { cartoes, adicionarCartao, editarCartao } = useCartoes();
 
   const [formData, setFormData] = useState({
-    id: '1',
-    nome: 'jacú',
-    img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.instagram.com%2Freel%2FC8NKre2y056%2F&psig=AOvVaw3Vul_pSGDxEW8XoyxvYyIy&ust=1749687837990000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiju6ON6I0DFQAAAAAdAAAAABAL',
+    id: '',
+    nome: '',
+    img: '',
   });
 
   useEffect(() => {
-    if (id !== undefined && cards[id]) {
-      setFormData(cards[id]);
+    if (id !== undefined && cartoes[id]) {
+      setFormData(cartoes[id]);
     }
-  }, [id, cards]);
+  }, [id, cartoes]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,11 +36,10 @@ export const useFormCard = () => {
     };
 
     if (id === undefined) {
-      addcards(novoCartao);
+      adicionarCartao(novoCartao);
     } else {
-      editcards (id, novoCartao);
+      editarCartao(id, novoCartao);
     }
-
     navigate('/home');
   };
 

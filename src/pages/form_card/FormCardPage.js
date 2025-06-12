@@ -1,12 +1,12 @@
-import { useFormCard } from '../../hooks/UseFormCards';
-import FormCard from '../../components/container/cards/FormCards';
+import { useFormCard } from './../../hooks/useFormCard';
+import FormCard from '../../components/container/form_cards/FormCard';
 
 export default function FormCardPage() {
   const {
     formData,
     handleChange,
     handleSubmit,
-    editmode,
+    modoEdicao,
   } = useFormCard();
 
   return (
@@ -14,7 +14,7 @@ export default function FormCardPage() {
       formData={formData}
       onChange={handleChange}
       onSubmit={handleSubmit}
-      modoEdicao={editmode}
+      modoEdicao={modoEdicao}
     />
   );
 }

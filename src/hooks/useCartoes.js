@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { basecards } from '../model/cards/FormCards';
+import { cartoesBase } from '../models/Cartoes';
 
 const STORAGE_KEY = 'cartoes';
 

@@ -1,17 +1,17 @@
-import LoginInputs from '../../components/container/login_inputs/LoginInputs';
 import { useState } from 'react';
-import Loginbtns from '../../components/container/LoginBtns/LoginBtns';
+import LoginBtns from '../../components/container/login_btns/LoginBtns';
+import LoginInputs from '../../components/container/login_inputs/LoginInputs';
+import TextNavigation from '../../components/ui/text_navigation/TextNavigation';
 
-import styles from "./LoginPage.module.scss";
+import styles from './login_page.module.scss';
 import { useNavigate } from 'react-router-dom';
-import TextNavegate from '../../components/ui/text_navigate/TextNavegate';
 
 function LoginPage() {
-    const [LoginForm, setLoginForm] = useState({
+    const [loginForm, setLoginForm] = 
+    useState({
         email: '',
         password: '',
     });
-    const navigate = useNavigate;
 
     const onChange = (e) => {
         const { name, value } = e.target;
@@ -21,32 +21,41 @@ function LoginPage() {
         }));
     }
 
-    const tryLogin = () => {
-        const { email, password } = LoginForm;
+    const navigate = useNavigate();
 
-        if (email === 'teste@gmail.com' && password === '12345678') {
+    const cad = {
+        email: 'teste@mail.com',
+        password: '12345678',
+    }
+
+    const tryLogin = () => {
+        const { email, password } = loginForm;
+
+        if (email === cad.email && password === cad.password) {
             alert("Login realizado com sucesso!");
             navigate('/home');
         } else {
-            alert("Email ou senha incorretos!")
+            alert("Email ou Senha incorretos!");
         }
     }
+
     return <>
         <div className={styles.LoginPage}>
-            <div className={styles.blur}></div>
-            <div className={styles.title}>
+            <div className={styles.Blur}></div>
+            <div className={styles.Title}>
                 <h1>LOGIN</h1>
-                <p>Gloria senhor</p>
+                <p>Reserve sua viagem dos sonhos hoje!</p>
             </div>
-            <div >
-                <LoginInputs onChange={onChange} />
-                <Loginbtns tryLogin={tryLogin} />
+            <div>
+                <LoginInputs onChange={onChange}/>
+                <LoginBtns tryLogin={tryLogin}/>
             </div>
             <div className={styles.NavigationCreateAcount}>
                 <h6>Não tem uma conta?&nbsp;</h6>
-                <TextNavegate text={"Clique Aqui"} />
+                <TextNavigation text={"Clique aqui!"} />
             </div>
         </div>
     </>
 }
+
 export default LoginPage;
