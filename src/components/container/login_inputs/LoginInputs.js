@@ -5,6 +5,7 @@ import TextNavigation from './../../ui/text_navigation/TextNavigation';
 
 function LoginInputs({onChange}) {
     return <>
+
         <div className={styles.Inputs}>
             <Input
                 name="email"

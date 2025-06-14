@@ -6,10 +6,10 @@ import { faApple, faGoogle, faMicrosoft } from '@fortawesome/free-brands-svg-ico
 function LoginBtns({tryLogin}) {
     return <>
         <div className={styles.LoginBtns}>
-            <ButtonText onClick={tryLogin}>ENTRAR</ButtonText>
+            <ButtonText onClick={tryLogin}>//ENTRAR</ButtonText>
             <div>
                 <h6>OU</h6>
-                <div>
+                <div className={styles.IconTx}>
                     <ButtonIcon icon={faGoogle}/>
                     <ButtonIcon icon={faApple}/>
                     <ButtonIcon icon={faMicrosoft}/>

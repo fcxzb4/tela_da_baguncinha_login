@@ -1,41 +1,18 @@
-.LoginBtns{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-    div{
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-
-        div{
-            width: 65%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        h6{
-            width: 30%;
-            text-align: center;
-            font-size: 0.7vw;
-            border-bottom: 1px solid white;
-            margin: 1.5vw 0 1vw;
-        }
-    }
+.LoginBtns {
+    position: relative;
+    left: 1.2vw;
 }
 
 
-.red{
+
+.red {
     background-color: red;
 }
-.blue{
+
+.blue {
     background-color: blue;
 }
-.green{
+
+.green {
     background-color: green;
 }
