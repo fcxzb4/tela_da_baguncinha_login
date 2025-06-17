@@ -104,29 +104,12 @@
   }
 }
 
-/*.BtnHeader{
-    width: 7%;
-    height: 5vh;
-    position: relative;
+.toggle{
+  width: 10vw;
+  height: 5vh;
 
-    margin: 1vh 2vw;
+  position: relative;
+  right: 20vw;
 
-    font-size: 1.2vw;
-    color: white;
-
-    border-radius: 0.3vw;
-    background-color: #33333360;
-    backdrop-filter: blur(5px);
-    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 1);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-
-    transition: all 0.2s ease-in-out;
-
-    &:hover{
-        transform: scale(1.05);
-    }
-}*/
+  background-color: rebeccapurple;
+}

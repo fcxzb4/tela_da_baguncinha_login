@@ -1,0 +1,29 @@
+:root [data-theme='dark']{
+  --bg: #fff;
+  --text: #000;
+  --border: #ddd;
+  --card-bg: #f9f9f9;
+}
+
+ :root [data-theme='light']{
+  --bg: #121212;
+  --text: #eee;
+  --border: #333;
+  --card-bg: #1e1e1e;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
