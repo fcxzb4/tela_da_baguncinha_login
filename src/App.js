@@ -4,9 +4,11 @@ import './App.css';
 import Home from "./pages/home_page/Home";
 import LoginPage from "./pages/login_page/LoginPage";
 import FormCardPage from "./pages/form_card/FormCardPage";
-import { ThemeProvider } from './theme/themeContext';
+import { ThemeProvider } from './context/themeContext';
 import { GlobalStyles } from "./styles/GlobalStyles";
 import styled from "styled-components";
+import PrivateRoute from "./Privateroutes";
+import { AuthProvider } from "./context/AuthContext";
 
 const AppStyle = styled.div`
 
@@ -14,17 +16,27 @@ const AppStyle = styled.div`
 
 function App() {
     return (
-        <div className="App">
-            <ThemeProvider>
-                <GlobalStyles />
-                <Header />
-                <Routes>
-                    <Route path='/' element={<LoginPage />} />
-                    <Route path='/home' element={<Home />} />
-                    <Route path='/form' element={<FormCardPage />} />
-                </Routes>
-            </ThemeProvider>
-        </div>
+        <AuthProvider>
+            <div className="App">
+                <ThemeProvider>
+                    <GlobalStyles />
+                    <Header />
+                    <Routes>
+                        <Route path='/' element={<LoginPage />} />
+                        <Route path='/home' element={
+                            <PrivateRoute >
+                                <Home />
+                            </PrivateRoute>
+                        } />
+                        <Route path='/form' element={
+                            <PrivateRoute>
+                                <FormCardPage />
+                            </PrivateRoute>
+                        } />
+                    </Routes>
+                </ThemeProvider>
+            </div >
+        </AuthProvider>
     );
 }
 
