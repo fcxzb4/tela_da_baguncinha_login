@@ -1,0 +1,21 @@
+.BtnFooter {
+    position: fixed;
+    top: 86vh;
+    left: 88vw;
+
+    width: 3vw;
+    height: 6vh;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    margin: 4vh;
+    padding: 0%;
+    gap: 0;
+}
+
+.BtnFooter:hover {
+    transform: scale(0.8);
+}

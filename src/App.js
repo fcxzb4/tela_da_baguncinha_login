@@ -9,6 +9,7 @@ import { GlobalStyles } from "./styles/GlobalStyles";
 import styled from "styled-components";
 import PrivateRoute from "./Privateroutes";
 import { AuthProvider } from "./context/AuthContext";
+import Port from "./pages/portifolio_page/Port";
 
 const AppStyle = styled.div`
 
@@ -22,6 +23,7 @@ function App() {
                     <GlobalStyles />
                     <Header />
                     <Routes>
+                        <Route path='/port' element={ <Port/>} />
                         <Route path='/' element={<LoginPage />} />
                         <Route path='/home' element={
                             <PrivateRoute >

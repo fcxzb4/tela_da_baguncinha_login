@@ -1,0 +1,61 @@
+.AllText {
+  margin: 0 40vw;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Myname {
+  font-size: 5vh;
+  font-family: var(--fontP);
+
+  position: relative;
+  top: 18vh;
+  right: 9vw;
+
+  cursor: pointer;
+
+  color: rgb(158, 116, 255);
+}
+
+/*animated name button*/
+.Myname:hover {
+  color: #e66363;
+
+  border-radius: 35px;
+  cursor: pointer;
+  transition: all 1000ms ease-in-out;
+  transform: scale(1.2);
+
+  box-shadow: 0 0 25px var(--light_blue), 0 0 30px var(--light_blue);
+
+
+  border: none;
+}
+
+.SubText p {
+  font-size: 3vh;
+  font-family: var(--fontS);
+
+  color: #ff0000;
+
+  position: absolute;
+  margin: 25vh 0 0 31vw;
+}
+
+#Video_Try {
+  position: relative;
+
+  top: 1vh;
+  left: 1vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 1vw;
+  border: none;
+}
