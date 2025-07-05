@@ -47,16 +47,16 @@ function LoginPage() {
         <div className={styles.LoginPage}>
             <div className={styles.Blur}></div>
             <div className={styles.Title}>
-                <h1>LOGIN</h1>
-                <p>Reserve sua viagem dos sonhos hoje!</p>
+                <h1>LOYALTy</h1>
+                <p>OBEY THE PARTY STAY LOYAL!</p>
             </div>
             <div>
                 <LoginInputs onChange={onChange}/>
                 <LoginBtns tryLogin={tryLogin}/>
             </div>
             <div className={styles.NavigationCreateAcount}>
-                <h6>Não tem uma conta?&nbsp;</h6>
-                <TextNavigation text={"Clique aqui!"} />
+                <h6>obey your master?&nbsp;</h6>
+                <TextNavigation text={"KEEP YOUR FREEDOM!"} />
             </div>
         </div>
     </>
