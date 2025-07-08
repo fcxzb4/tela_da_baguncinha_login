@@ -10,6 +10,7 @@ import styled from "styled-components";
 import PrivateRoute from "./Privateroutes";
 import { AuthProvider } from "./context/AuthContext";
 import Port from "./pages/portifolio_page/Port";
+import CadastroForm from "./pages/sign_in_page/CadastroForm";
 
 const AppStyle = styled.div`
 
@@ -23,6 +24,7 @@ function App() {
                     <GlobalStyles />
                     <Header />
                     <Routes>
+                        <Route path='/sign' element={ <CadastroForm />} />
                         <Route path='/port' element={ <Port/>} />
                         <Route path='/' element={<LoginPage />} />
                         <Route path='/home' element={
